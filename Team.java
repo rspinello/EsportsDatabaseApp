@@ -12,15 +12,14 @@ public class Team{
         COUNTRY=c;
         YEARS_PRO=y;
         MONEY_WON=mo;
-        MANAGERID=ma;
     }
 
     public boolean equals(Object o){
         return this.TEAMID.equals(((Team)(o)).TEAMID);
     }
 
-    public static void main(String[] args){
-        System.out.println("hello");
-    }
+    //public static void main(String[] args){
+        //System.out.println("hello");
+    //}
 
 }
