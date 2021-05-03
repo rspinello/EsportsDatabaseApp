@@ -35,19 +35,45 @@ public class DatabaseManipulator {
         PlayerDao dao = new PlayerDao();
         return dao.selectAllPlayersByTournamentWins();
     }
-
+    
+    /////////////////////////////////////////
+    //////////////////TeamDao////////////////
+    /////////////////////////////////////////
+    public Team selectByTeamId(String teamId){
+        TeamDao dao = new TeamDao();
+        return dao.selectByTeamId(teamId);
+    }
+    
+    public ArrayList<Object> selectAllTeams(){
+        TeamDao dao = new TeamDao();
+        return dao.selectAllTeams();
+    }
+    
+    public ArrayList<Object> selectAllTeamsByMoneyWon(){
+        TeamDao dao = new TeamDao();
+        return dao.selectAllTeamsByMoneyWon();
+    }
+    
     public static void main(String[] args){
         DatabaseManipulator dm = new DatabaseManipulator();
         //Test UserDao
         //System.out.println(dm.selectByUserId("bdugan"));
         //dm.createNewUser(new User("dcole","csiscool55"));
         //System.out.println(dm.selectByUserId("dcole"));
+        //
         //Test PlayerDao
-        System.out.println(dm.selectByGamertag("NAF"));
+        //System.out.println(dm.selectByGamertag("NAF"));
         //ArrayList<Object> a = dm.selectAllPlayersByTournamentWins();
         //for(int i=0; i<a.size();i++){
             //System.out.println(a.get(i));
         //}
+        //
+        //Test TeamDao
+        //System.out.println(dm.selectByTeamId("Liquid"));
+        ArrayList<Object> a = dm.selectAllTeamsByMoneyWon();
+        for(int i=0; i<a.size();i++){
+            System.out.println(a.get(i));
+        }
     }
 
 }
