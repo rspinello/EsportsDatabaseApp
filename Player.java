@@ -17,11 +17,16 @@ public class Player{
         AGE=a;
         YEARS_PRO=y;
         TOURNAMENT_WINS=t;
-        IMAGE_RESOURCE_ID=I;
+        IMAGE_RESOURCE_ID=i;
     }
 
     public boolean equals(Object o){
         return this.PLAYERID.equals(((Player)o).PLAYERID);
     }
+    
+    public String toString(){
+        return PLAYERID+" "+FNAME+" "+LNAME+" "+COUNTRY+" "+AGE+" "+YEARS_PRO+" "+TOURNAMENT_WINS+" "+IMAGE_RESOURCE_ID;
+    }
+    
 
 }
