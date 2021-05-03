@@ -102,6 +102,30 @@ public class PlayerDao{
         return result;
     }
     
+    public Player selectByGamertag(String gamertag){
+        Player result = null;
+	  
+	    try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select * from PLAYER where GAMERTAG='"+gamertag+"'");
+            //System.out.println("select * from PLAYER where PLAYERID='"+playerId+"'");
+            
+            if (resultSet.next())
+            {
+                result = new Player(resultSet.getString("PLAYERID"),resultSet.getString("FNAME"),resultSet.getString("LNAME"),resultSet.getString("COUNTRY"),resultSet.getInt("AGE"),resultSet.getInt("YEARS_PRO"),resultSet.getInt("TOURNAMENT_WINS"),resultSet.getInt("IMAGERESOURCEID"));
+            }
+            
+            resultSet.close();
+            statement.close();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+    
     public ArrayList<Object> selectAllPlayers(){
 	  ArrayList<Object> result = new ArrayList<Object>();
 	  
@@ -152,5 +176,4 @@ public class PlayerDao{
 	  return result;
   }
     
-  
 }

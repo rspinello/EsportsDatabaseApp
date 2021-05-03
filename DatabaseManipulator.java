@@ -21,6 +21,11 @@ public class DatabaseManipulator {
         return dao.selectByPlayerId(playerId);
     }
     
+    public Player selectByGamertag(String gamertag){
+        PlayerDao dao = new PlayerDao();
+        return dao.selectByGamertag(gamertag);
+    }
+    
     public ArrayList<Object> selectAllPlayers(){
         PlayerDao dao = new PlayerDao();
         return dao.selectAllPlayers();
@@ -38,12 +43,11 @@ public class DatabaseManipulator {
         //dm.createNewUser(new User("dcole","csiscool55"));
         //System.out.println(dm.selectByUserId("dcole"));
         //Test PlayerDao
-        //System.out.println(dm.selectByPlayerId("Stewie2K_CSGO"));
-        ArrayList<Object> a = dm.selectAllPlayersByTournamentWins();
-        for(int i=0; i<a.size();i++){
-            System.out.println(a.get(i));
-        }
-        
+        System.out.println(dm.selectByGamertag("NAF"));
+        //ArrayList<Object> a = dm.selectAllPlayersByTournamentWins();
+        //for(int i=0; i<a.size();i++){
+            //System.out.println(a.get(i));
+        //}
     }
 
 }
