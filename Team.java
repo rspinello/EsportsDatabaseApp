@@ -18,8 +18,8 @@ public class Team{
         return this.TEAMID.equals(((Team)(o)).TEAMID);
     }
 
-    //public static void main(String[] args){
-        //System.out.println("hello");
-    //}
+    public String toString(){
+        return TEAMID+" "+NAME+" "+COUNTRY+" "+YEARS_PRO+" "+MONEY_WON;
+    }
 
 }
