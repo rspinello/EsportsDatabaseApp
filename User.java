@@ -8,4 +8,7 @@ public class User{
         PASSWORD=p;
     }
 
+    public String toString(){
+        return "USERID:"+USERID+" PASSWORD:"+PASSWORD;
+    }
 }

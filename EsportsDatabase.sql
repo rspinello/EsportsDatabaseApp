@@ -26,6 +26,14 @@ INSERT INTO PLAYER VALUES('Stewie2K_CSGO','Jake','Yip','Stewie2K','USA',23,7,14,
 INSERT INTO PLAYER VALUES('Grim_CSGO','Michael','Wince','Grim','USA',19,2,1,0);
 INSERT INTO PLAYER VALUES('FalleN_CSGO','Gabriel','Toledo','FalleN','Brazil',29,6,13,0);
 INSERT INTO PLAYER VALUES('NAF_CSGO','Keith','Markovic','NAF','Canada',23,7,9,0);
+INSERT INTO PLAYER VALUES('Magnum_Valorant','Martin','Penkov','Magnum','Czech',23,2,6,0);
+INSERT INTO PLAYER VALUES('Derke_Valorant','Nikita','Sirmitev','Derke','Finland',18,2,3,0);
+INSERT INTO PLAYER VALUES('Mistic_Valorant','James','Orfila','Mistic','United Kingdom',19,2,4,0);
+INSERT INTO PLAYER VALUES('Doma_Valorant','Domagoj','Fancev','Doma','Croatia',17,2,5,0);
+INSERT INTO PLAYER VALUES('Boaster_Valorant','Jake','Howlett','Boaster','United Kingdom',25,3,4,0);
+INSERT INTO PLAYER VALUES('Rizzo_RocketLeague','Dillion','Rizzo','Rizzo','USA',23,4,4,0);
+INSERT INTO PLAYER VALUES('JKNAPS_RocketLeague','Jacob','Knapman','JKNAPS','Canada',21,4,4,0);
+INSERT INTO PLAYER VALUES('Chicago_RocketLeague','Reed','Wilen','Chicago','USA',19,5,3,0);
 
 
 CREATE TABLE GAME
@@ -38,6 +46,8 @@ CREATE TABLE GAME
 
 --Games
 INSERT INTO GAME VALUES('CSGO','CSGO',9);
+INSERT INTO GAME VALUES('Valorant','Valorant',2);
+INSERT INTO GAME VALUES('RocketLeague','Rocket League',6);
 
 CREATE TABLE TEAM
 (
@@ -51,11 +61,13 @@ CREATE TABLE TEAM
 
 --Team
 INSERT INTO TEAM VALUES('Liquid','Liquid','USA',21,36000000);
+INSERT INTO TEAM VALUES('Fnatic','Fnatic','United Kingdom',2,1000000);
+INSERT INTO TEAM VALUES('G2Esports','G2 Esports','Germany',5,1200000);
 
 CREATE TABLE TOURNAMENT
 (
     TOURNAMENT_ID       VARCHAR2(30),
-    DAY                VARCHAR2(30),
+    DAY                 VARCHAR2(30),
     GAMEID              VARCHAR2(30),
     WINNER              VARCHAR2(30),
     CONSTRAINT TOURNAMENT_PRIMARY_KEY PRIMARY KEY (TOURNAMENT_ID),
@@ -74,10 +86,18 @@ CREATE TABLE PLAYS_FOR(
 );
 
 INSERT INTO PLAYS_FOR VALUES ('EliGE_CSGO','Liquid','CSGO');
-INSERT INTO PLAYS_FOR VALUES ('Stewie2K','Liquid','CSGO');
+INSERT INTO PLAYS_FOR VALUES ('Stewie2K_CSGO','Liquid','CSGO');
 INSERT INTO PLAYS_FOR VALUES ('Grim_CSGO','Liquid','CSGO');
 INSERT INTO PLAYS_FOR VALUES ('FalleN_CSGO','Liquid','CSGO');
 INSERT INTO PLAYS_FOR VALUES ('NAF_CSGO','Liquid','CSGO');
+INSERT INTO PLAYS_FOR VALUES ('Magnum_Valorant','Fnatic','Valorant');
+INSERT INTO PLAYS_FOR VALUES ('Derke_Valorant','Fnatic','Valorant');
+INSERT INTO PLAYS_FOR VALUES ('Mistic_Valorant','Fnatic','Valorant');
+INSERT INTO PLAYS_FOR VALUES ('Doma_Valorant','Fnatic','Valorant');
+INSERT INTO PLAYS_FOR VALUES ('Boaster_Valorant','Fnatic','Valorant');
+INSERT INTO PLAYS_FOR VALUES ('Rizzo_RocketLeague','G2Esports','RocketLeague');
+INSERT INTO PLAYS_FOR VALUES ('JKNAPS_RocketLeague','G2Esports','RocketLeague');
+INSERT INTO PLAYS_FOR VALUES('Chicago_RocketLeague','G2Esports','RocketLeague');
 
 --For the users of the Database
 CREATE TABLE REGISTERED_USERS
@@ -86,3 +106,5 @@ CREATE TABLE REGISTERED_USERS
     PASSWORD            VARCHAR2(30),
     CONSTRAINT REGISTERED_USERS_PRIMARY_KEY PRIMARY KEY (USERID)
 );
+
+INSERT INTO REGISTERED_USERS VALUES ('bdugan','csrocks55');
