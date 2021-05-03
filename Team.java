@@ -6,7 +6,7 @@ public class Team{
     public double MONEY_WON;
     public String MANAGERID;
 
-    public Team(String td, String n, String c, int y, double mo, String ma){
+    public Team(String td, String n, String c, int y, double mo){
         TEAMID=td;
         NAME=n;
         COUNTRY=c;
