@@ -12,5 +12,9 @@ public class PlaysFor{
     public boolean equals(Object o){
         return this.PLAYERID.equals(((PlaysFor)(o)).PLAYERID) && this.TEAMID.equals(((PlaysFor)(o)).TEAMID) && this.GAMEID.equals(((PlaysFor)(o)).GAMEID);
     }
+    
+    public String toString(){
+        return PLAYERID+" "+TEAMID+" "+GAMEID;
+    }
 
 }
