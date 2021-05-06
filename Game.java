@@ -13,5 +13,9 @@ public class Game{
     public boolean equals(Object o){
         return this.GAMEID.equals(((Game)(o)).GAMEID);
     }
+    
+    public String toString(){
+        return GAMEID+" "+NAME+" "+YEARS_PLAYED;
+    }
 
 }
