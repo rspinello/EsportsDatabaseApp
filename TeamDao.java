@@ -152,4 +152,29 @@ public class TeamDao{
 	  return result;
   }
     
+    public ArrayList<Object> selectAllTeamsByGameId(String gameId){
+	  ArrayList<Object> result = new ArrayList<Object>();
+	  
+	   try {
+		  //System.out.println("In selectAll()...");
+		  Statement statement = connection.createStatement();
+		  ResultSet resultSet = statement.executeQuery("select * from TEAM, (select distinct TEAM.TEAMID as T from TEAM, PLAYS_FOR where TEAM.TEAMID=PLAYS_FOR.TEAMID and PLAYS_FOR.GAMEID='"+gameId+"') where TEAM.TEAMID = T");
+		  
+		   while (resultSet.next())
+		  {
+			  Team t = new Team(resultSet.getString("TEAMID"),resultSet.getString("NAME"),resultSet.getString("COUNTRY"),resultSet.getInt("YEARS_PRO"),resultSet.getDouble("MONEY_WON"));
+              result.add(t);
+		  }
+		  
+		  resultSet.close();
+		  statement.close();
+	  }
+	  catch (Exception e)
+	 {
+		 e.printStackTrace();
+	 }
+
+	  return result;
+  }
+    
 }

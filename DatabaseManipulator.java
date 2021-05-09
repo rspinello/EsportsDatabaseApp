@@ -54,6 +54,11 @@ public class DatabaseManipulator {
         return dao.selectAllTeamsByMoneyWon();
     }
     
+    public ArrayList<Object> selectAllTeamsByGameId(String gameId){
+        TeamDao dao = new TeamDao();
+        return dao.selectAllTeamsByGameId(gameId);
+    }
+    
     /////////////////////////////////////////
     //////////////////GameDao////////////////
     /////////////////////////////////////////
@@ -119,6 +124,10 @@ public class DatabaseManipulator {
         //for(int i=0; i<a.size();i++){
            // System.out.println(a.get(i));
         //}
+        ArrayList<Object> a = dm.selectAllTeamsByGameId("CSGO");
+        for(int i=0; i<a.size();i++){
+            System.out.println(a.get(i));
+        }
         //Test GameDao
         //System.out.println(dm.selectByGameId("CSGO"));
         //ArrayList<Object> a = dm.selectAllGames();
