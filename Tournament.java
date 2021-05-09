@@ -15,4 +15,8 @@ public class Tournament{
         return this.TOURNAMENT_ID.equals(((Tournament)(o)).TOURNAMENT_ID);
     }
 
+    public String toString(){
+        return TOURNAMENT_ID+" "+DAY+" "+GAMEID+" "+WINNER;
+    }
+
 }
