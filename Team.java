@@ -4,7 +4,6 @@ public class Team{
     public String COUNTRY;   
     public int YEARS_PRO;
     public double MONEY_WON;
-    public String MANAGERID;
 
     public Team(String td, String n, String c, int y, double mo){
         TEAMID=td;
@@ -34,10 +33,6 @@ public class Team{
         return MONEY_WON;
     }
     
-    public String getMANAGERID(){
-        return MANAGERID;
-    }
-    
     public void setTEAMID(String t){
         TEAMID=t;
     }
@@ -56,10 +51,6 @@ public class Team{
     
     public void setMONEY_WON(double m){
         MONEY_WON=m;
-    }
-    
-    public void setMANAGERID(String m){
-        MANAGERID=m;
     }
     
     public boolean equals(Object o){
