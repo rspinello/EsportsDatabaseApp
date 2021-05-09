@@ -8,6 +8,30 @@ public class PlaysFor{
         TEAMID=t;
         GAMEID=g;
     }
+    
+    public String getPLAYERID(){
+        return PLAYERID;
+    }
+    
+    public String getTEAMID(){
+        return TEAMID;
+    }
+    
+    public String getGAMEID(){
+        return GAMEID;
+    }
+    
+    public void setPLAYERID(String p){
+        PLAYERID=p;
+    }
+    
+    public void setTEAMID(String t){
+        TEAMID=t;
+    }
+    
+    public void setGAMEID(String g){
+        GAMEID=g;
+    }
 
     public boolean equals(Object o){
         return this.PLAYERID.equals(((PlaysFor)(o)).PLAYERID) && this.TEAMID.equals(((PlaysFor)(o)).TEAMID) && this.GAMEID.equals(((PlaysFor)(o)).GAMEID);
