@@ -17,5 +17,30 @@ public class Game{
     public String toString(){
         return GAMEID+" "+NAME+" "+YEARS_PLAYED;
     }
-
+    
+    public String getGAMEID(){
+        return GAMEID;
+    }
+    
+    public String getNAME(){
+        return NAME;
+    }
+    
+    public int getYEARS_PLAYED(){
+        return YEARS_PLAYED;
+    }
+    
+    public void setGAMEID(String g){
+        GAMEID=g;
+    }
+    
+    public void setNAME(String n){
+        NAME=n;
+    }
+    
+    public void setYEARS_PLAYED(int y){
+        YEARS_PLAYED=y;
+    }
+    
+    
 }
