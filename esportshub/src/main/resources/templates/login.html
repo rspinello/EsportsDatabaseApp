@@ -1,46 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Esports Hub</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css} "/>
+    </head>
+    <body>
+        <div class="jumbotron text-center" style="background-image: url(logo.png);background-color:#77dd77; background-size: 10%;"></div>
 
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="utf-8">
+        <div class="form-label-group text-center">
+            <form action="#" th:action="@{/login}" th:object="${user}" method="post">
+                <label>Username</label>
+                <p><input type="text"  placeholder="Enter Username" th:field="*{uname}" /></p>
+                <label>Password</label>
+                <p><input type="password" placeholder="Enter Password" th:field="*{pass}" /></p>
+                <p><input type="submit" value="Login" /></p>
+            </form>
 
-  <title>Esports Login</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-  <link rel="icon" href="logo.png">
+            <p>Don't have an account? Register <a href="createuser.html">here</a></p>
+        </div>
 
-  <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css} "/>
-
-</head>
-
-<body>
-
-    
-  <div class="jumbotron text-center" style="background-image: url(logo.png);background-color:#77dd77; background-size: 10%;">
-    
-    <p></p>
-  </div>
-
-  <div class="form-label-group text-center">
-    <form action="#" th.action="@{/login}"  th:object="${user}" method="post">
-        <label>Username</label>
-        <input type="text" placeholder="Enter Username" th:field="*{id}" required><br/>
-        
-        <label>Password</label>
-        <input type="password" placeholder="Enter Password" th:field="*{password}" required><br/>
-    
-        <button type="submit" class="btn btn-success">Login</button>
-    </form>
-    
-    <p>Don't have an account? Register <a href="createuser.html">here</a></p>
-    </form>
-  </div>
-
-  <div class="jumbotron text-center" style="background-color:#77dd77;position: absolute;bottom: 0;width: 100%;height: 2.5rem;">
-    <p>The Esports Hub. Stonehill DBMS Project by Bobby, Derek, and Jimmy.</p>
-  </div>
-
-
-  
-</body>
+        <div class="jumbotron text-center" style="background-color:#77dd77;position: absolute;bottom: 0;width: 100%;height: 2.5rem;">
+            <p>The Esports Hub. Stonehill DBMS Project by Bobby, Derek, and Jimmy.</p>
+        </div>
+    </body>
 </html>

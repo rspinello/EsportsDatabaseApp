@@ -1,4 +1,7 @@
+package com.example.esportshub;
+
 import java.util.ArrayList;
+
 public class DatabaseManipulator {
     //////////////////////////////
     ////////////UserDao///////////

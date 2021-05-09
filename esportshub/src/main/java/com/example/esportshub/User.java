@@ -1,9 +1,21 @@
 package com.example.esportshub;
 
 public class User {
-    private String uname;
-    private String pass;
+    public String uname;
+    public String pass;
 
+    //contsructors
+    public User() {
+        this.uname = null;
+        this.pass = null;
+    }
+
+    public User(String uname, String pass) {
+        this.uname = uname;
+        this.pass = pass;
+    }
+
+    //Getters
     public String getUname() {
         return uname;
     }
@@ -12,11 +24,8 @@ public class User {
         return pass;
     }
 
-    public void setName(String uname) {
-        this.uname = uname;
-    }
-
-    public void setPass(String pass) {
-        this.pass = pass;
+    //other
+    public String toString(){
+        return "USERID:"+uname+" PASSWORD:"+pass;
     }
 }
