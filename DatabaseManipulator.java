@@ -1,7 +1,4 @@
-package com.example.esportshub;
-
 import java.util.ArrayList;
-
 public class DatabaseManipulator {
     //////////////////////////////
     ////////////UserDao///////////
@@ -83,6 +80,11 @@ public class DatabaseManipulator {
         return dao.selectAllPlaysFor();
     }
     
+    public ArrayList<Object> selectAllPlaysForByTeamId(String teamId){
+        PlaysForDao dao = new PlaysForDao();
+        return dao.selectAllPlaysForByTeamId(teamId);
+    }
+    
     /////////////////////////////////////////
     ////////////TournamentDao////////////////
     /////////////////////////////////////////
@@ -126,6 +128,10 @@ public class DatabaseManipulator {
         //Test PlaysForDao
         //System.out.println(dm.selectPlaysForByPrimaryKey("Stewie2K_CSGO","Liquid","CSGO"));
         //ArrayList<Object> a = dm.selectAllPlaysFor();
+        //for(int i=0; i<a.size();i++){
+            //System.out.println(a.get(i));
+        //}
+        //ArrayList<Object> a = dm.selectAllPlaysForByTeamId("Liquid");
         //for(int i=0; i<a.size();i++){
             //System.out.println(a.get(i));
         //}
