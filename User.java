@@ -7,6 +7,22 @@ public class User{
         USERID=u;
         PASSWORD=p;
     }
+    
+    public String getUSERID(){
+        return USERID;
+    }
+    
+    public String getPASSWORD(){
+        return PASSWORD;
+    }
+    
+    public void setUSERID(String u){
+        USERID=u;
+    }
+    
+    public void setPASSWORD(String p){
+        PASSWORD=p;
+    }
 
     public String toString(){
         return "USERID:"+USERID+" PASSWORD:"+PASSWORD;
