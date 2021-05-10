@@ -127,6 +127,7 @@ dd {
   margin-left: 0;
 }
 
+
 blockquote {
   margin: 0 0 1rem;
 }
@@ -2401,9 +2402,9 @@ fieldset:disabled a.btn {
 }
 
 .btn-success {
-  color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
+  color: black;
+  background-color: #77dd77;
+  border-color: black;
 }
 
 .btn-success:hover {
@@ -3868,18 +3869,18 @@ input[type="button"].btn-block {
 }
 
 .nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
+
+    border-radius: 25px;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    color: black;
 }
 
 .nav-link {
-  display: block;
-  padding: 0.5rem 1rem;
+  display:inline;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -3902,6 +3903,28 @@ input[type="button"].btn-block {
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+}
+
+.navi {
+  border:1px solid #ccc;
+  border-width:1px 0;
+  list-style:none;
+  margin:0;
+  padding:0;
+  text-align:center;
+
+}
+
+.nav li{
+  display:inline;
+  border: 3px solid black;
+  margin: 10px;
+  padding: 9px;
+}
+
+.nav a{
+  display:inline-block;
+  padding:10px;
 }
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
@@ -4273,7 +4296,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(16, 187, 25, 0.9);
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
@@ -4880,6 +4903,20 @@ input[type="button"].btn-block {
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+.jumbotron-a {
+  padding: 1px 1px 1px 1px;
+  margin-bottom: 1px 1px 1px 1px;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+.jumbotron-f {
+  padding: 50px 50px 50px 50px;
+  margin-bottom: 20px 20px 20px 20px;
   background-color: #e9ecef;
   border-radius: 0.3rem;
 }
