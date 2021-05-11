@@ -3840,6 +3840,8 @@ input[type="button"].btn-block {
   }
 }
 
+
+
 .custom-range::-ms-thumb:active {
   background-color: #b3d7ff;
 }
@@ -3938,6 +3940,23 @@ a:link {
   color: black;
   text-decoration: none;
 }
+
+.content{
+
+  text-align: center;
+
+}
+
+table[name="board"] {
+  margin-left: 75px;
+  text-align: center;
+}
+
+table, th {
+  padding: 85px;
+  padding-bottom: 30px;
+}
+
 
 /* visited link */
 a:visited {
