@@ -1,37 +1,65 @@
 <!doctype html>
 
-<html lang="en">
+<html  xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
-  <meta charset="utf-8">
-
-  <title>Player Details</title>
-  <link rel="icon" href="logo.png">
-
-  <link href="\esportshub\src\main\resources\static\css\bootstrap.css" rel="stylesheet">
-
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Player Detail</title>
+  <link rel="icon" href="logo.png"/>
+  <link href="\css\bootstrap.css" rel="stylesheet"/>
 </head>
 
 <body>
 
     
   <div class="jumbotron-a text-center" style="background-color:white;">
-    <img src="playdetail.png" style="width: 100px;height:100px;">
+    <img src="players.png" style="width: 100px;height:100px;">
     <p></p>
   </div>
 
   <ul class="nav" >
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="Teams.html">Teams</a></li>
-    <li><a href="Players.html">Players</a></li>
-    <li><a href="Tournaments.html">Tournaments</a></li>
-    <li><a href="Games.html">Games</a></li>
-    <input type="text" placeholder="Search..">
+    <li><a th:href="@{/home}">Home</a></li>
+    <li><a th:href="@{/teams}">Teams</a></li>
+    <li><a th:href="@{/players}">Players</a></li>
+    <li><a th:href="@{/tournaments}">Tournaments</a></li>
+    <li><a th:href="@{/games}">Games</a></li>
   </ul>
   
   <div class="content">
 
-
-    //PUT METHODS FOR CONTENT HERE
+    <h1 th:text="${player.gamertag}"></h1>
+    <h2 th:text="'Name: ' + ${player.fname} + ' ' + ${player.lname}"></h2>
+    <h2 th:text="'County: ' + ${player.country}"></h2>
+    <h2 th:text="'Age: ' + ${player.age}"></h2>
+    <h2 th:text="'Years Pro: ' + ${player.years_pro}"></h2>
+    <h2 th:text="'Tournament Wins: ' + ${player.tournament_wins}"></h2>
+    </br>
+    <h1>Team</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>County</th>
+        <th>Years Pro</th>
+        <th>Money Won</th>
+      </tr>
+      <tr>
+        <td th:text="${team.name}"></td>
+        <td th:text="${team.country}"></td>
+        <td th:text="${team.years_pro}"></td>
+        <td th:text="'$' + ${team.money_won}"></td>
+      </tr>
+    </table>
+    </br>
+    <h1>Game</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Years Played</th>
+      </tr>
+      <tr>
+        <td th:text="${game.name}"></td>
+        <td th:text="${game.years_played}"></td>
+      </tr>
+    </table>
 
   </div>
 

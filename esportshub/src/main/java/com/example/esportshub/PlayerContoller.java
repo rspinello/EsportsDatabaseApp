@@ -24,11 +24,10 @@ public class PlayerContoller {
     public String playerSearch(@RequestParam("gamertag") String gamertag, Model model, RedirectAttributes redirectAttributes) {
         PlayerDao dao = new PlayerDao();
         Player player = dao.selectByGamertag(gamertag);
-        System.out.println(gamertag);
         if(player == null)
             return "redirect:/players";
         
-        redirectAttributes.addAttribute("player", player);
+        redirectAttributes.addFlashAttribute("player", gamertag);
         return "redirect:/playerdetail";
     }
 
