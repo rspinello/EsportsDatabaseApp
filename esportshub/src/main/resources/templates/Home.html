@@ -24,8 +24,9 @@
   
   <div class="content">
 
-    <table>
+    <table name = "board">
       <tr>
+        <th>Rank</th>
         <th>Gamertag</th>
         <th>Name</th>
         <th>County</th>
@@ -33,8 +34,9 @@
         <th>Years Pro</th>
         <th>Tournament Wins</th>
       </tr>
-      <tr th:each="player : ${players}">
-        <td th:text="${player.playerid}"></td>
+      <tr th:each="player, playStat : ${players}">
+        <td th:text="${playStat.count}"></td>
+        <td th:text="${player.gamertag}"></td>
         <td th:text="${player.fname + ' ' + player.lname}"></td>
         <td th:text="${player.country}"></td>
         <td th:text="${player.age}"></td>
