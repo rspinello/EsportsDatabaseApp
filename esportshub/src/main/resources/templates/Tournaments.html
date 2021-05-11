@@ -4,9 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Esports Login</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+  <title>Tournaments</title>
   <link rel="icon" href="logo.png">
 
   <link href="\esportshub\src\main\resources\static\css\bootstrap.css" rel="stylesheet">
@@ -17,7 +15,7 @@
 
     
   <div class="jumbotron-a text-center" style="background-color:white;">
-    <img src="tournaments.png" style="width: 100px;px;height:100px;">
+    <img src="tournaments.png" style="width: 100px;height:100px;">
     <p></p>
   </div>
 
@@ -26,7 +24,10 @@
     <li><a href="Teams.html">Teams</a></li>
     <li><a href="Players.html">Players</a></li>
     <li><a href="Games.html">Games</a></li>
-    <input type="text" placeholder="Search..">
+    <form action="#" th:action="@{/Tournaments}" th:object="${tournament}" method="post">
+      <input type="text" placeholder="Search for team name.." th:field="*{tournament_id}" name="search">
+      <button type="submit" value="Submit" class="btn btn-success">Search</button>
+    </form>
   </ul>
   
   <div class="content">

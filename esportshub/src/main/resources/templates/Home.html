@@ -3,7 +3,7 @@
 <html xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Leaderboard</title>
+  <title>Home</title>
   <link rel="icon" href="logo.png"/>
   <link href="\css\bootstrap.css" rel="stylesheet"/>
 </head>
@@ -16,16 +16,17 @@
   </div>
 
   <ul class="nav" >
-    <li><a href="Teams.html">Teams</a></li>
-    <li><a href="Games.html">Games</a></li>
-    <li><a href="Players.html">Players</a></li>
-    <li><a href="Tournaments.html">Tournaments</a></li>
+    <li><a th:href="@{/teams}">Teams</a></li>
+    <li><a th:href="@{/games}">Games</a></li>
+    <li><a th:href="@{/players}">Players</a></li>
+    <li><a th:href="@{/tournaments}">Tournaments</a></li>
   </ul>
   
   <div class="content">
 
     <table>
       <tr>
+        <th>Rank</th>
         <th>Gamertag</th>
         <th>Name</th>
         <th>County</th>
@@ -33,8 +34,9 @@
         <th>Years Pro</th>
         <th>Tournament Wins</th>
       </tr>
-      <tr th:each="player : ${players}">
-        <td th:text="${player.playerid}"></td>
+      <tr th:each="player, playStat : ${players}">
+        <td th:text="${playStat.count}"></td>
+        <td th:text="${player.gamertag}"></td>
         <td th:text="${player.fname + ' ' + player.lname}"></td>
         <td th:text="${player.country}"></td>
         <td th:text="${player.age}"></td>
