@@ -151,5 +151,29 @@ public class PlaysForDao{
 
 	  return result;
   }
+
+  public PlaysFor selectByPlayerId(String playerId){
+    PlaysFor result = null;
+  
+    try {
+        Statement statement = connection.createStatement();
+        //System.out.println("select * from PLAYS_FOR where PLAYERID='"+playerId+"' and TEAMID='"+teamId+"' gameId='"+gameId+"'");
+        ResultSet resultSet = statement.executeQuery("select * from PLAYS_FOR where PLAYERID='"+playerId+"'");
+                    
+        if (resultSet.next())
+        {
+            result = new PlaysFor(resultSet.getString("PLAYERID"),resultSet.getString("TEAMID"),resultSet.getString("GAMEID"));
+        }
+        
+        resultSet.close();
+        statement.close();
+    }
+    catch (Exception e)
+    {
+        e.printStackTrace();
+    }
+
+    return result;
+}  
     
 }

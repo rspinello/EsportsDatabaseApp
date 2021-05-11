@@ -6,7 +6,7 @@ public class Team{
     public String country;   
     public int years_pro;
     public double money_won;
-    public String managerid;
+    //public String managerid;
 
     //constructors
     public Team(){
@@ -46,10 +46,6 @@ public class Team{
 
     public double getMoney_won() {
         return money_won;
-    }
-
-    public String getManagerid() {
-        return managerid;
     }
 
 
