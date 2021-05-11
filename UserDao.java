@@ -85,7 +85,8 @@ public class UserDao {
 	    try {
             //System.out.println("In selecByUserId()...");
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select * from USERS where userid='"+userid+"'");
+            ResultSet resultSet = statement.executeQuery("select * from REGISTERED_USERS where USERID='"+userid+"'");
+            //System.out.println("select * from REGISTERED_USERS where USERID='"+userid+"'");
             
             if (resultSet.next())
             {
@@ -102,6 +103,19 @@ public class UserDao {
         }
 
         return result;
+    }
+    
+    public void createNewUser(User u){
+        try {
+            Statement statement = connection.createStatement();
+            String sql = "insert into REGISTERED_USERS values ("+"'"+u.USERID+"',"+"'"+u.PASSWORD+"')";
+            //System.out.println("insert(): "+sql);
+            statement.executeUpdate(sql);
+            statement.close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 }
