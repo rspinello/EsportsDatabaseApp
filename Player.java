@@ -3,17 +3,19 @@ public class Player{
     public String PLAYERID;
     public String FNAME;       
     public String LNAME;      
-    public String COUNTRY;            
+    public String COUNTRY;
+    public String GAMERTAG;            
     public int AGE;               
     public int YEARS_PRO;         
     public int TOURNAMENT_WINS;    
     public int IMAGE_RESOURCE_ID;
     
-    public Player(String pd, String fn, String ln, String c, int a, int y, int t, int i){
+    public Player(String pd, String fn, String ln, String c, String g, int a, int y, int t, int i){
         PLAYERID=pd;
         FNAME=fn;
         LNAME=ln;
         COUNTRY=c;
+        GAMERTAG=g;
         AGE=a;
         YEARS_PRO=y;
         TOURNAMENT_WINS=t;
