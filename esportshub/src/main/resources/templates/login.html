@@ -1,21 +1,16 @@
 <!doctype html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
 
-<html lang="en">
 <head>
-  <meta charset="utf-8">
-
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Esports Login</title>
-  <link rel="icon" href="logo.png">
-
-  <link href="css/bootstrap.css" rel="stylesheet">
-
+  <link rel="icon" href="logo.png"/>
+  <link href="/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 
-<body>
-
-    
+<body>    
   <div class="jumbotron text-center" style="background-color:white; background-size: 10%;">
-    <img src="logo.png">
+    <img src="logo.png"/>
     <p></p>
   </div>
 
@@ -23,15 +18,23 @@
     <form name="loginForm" method="post" action="loginServlet"></form>
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
+<<<<<<< HEAD
     <p></p>
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
     <p></p>
     <br>
+=======
+    <br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <br>
+>>>>>>> 5063bb88eba699254e32f577e8d4f9502acd6f64
     <button type="submit" class="btn btn-success">Login</button>
     
-    <p>Don't have an account? Register <a href="createuser.html">here</a></p>
+      <p>Don't have an account? Register <a th:href="@{/createuser}">here</a></p>
     </form>
+
   </div>
 
   <div class="jumbotron-f text-center" style="background-color:#77dd77;position: absolute;bottom: 0;width: 100%;height: 2.5rem;">
