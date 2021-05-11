@@ -14,11 +14,6 @@ public class HomeController {
     public String home(Model model) {
         PlayerDao dao = new PlayerDao();
         ArrayList<Object> players = dao.selectAllPlayersByTournamentWins();
-
-        //String s ="";
-        //for(int i = 0; i < players.size(); i++) 
-            //s = s + (i+1) + ": " + players.get(i) + "\n";
-
         model.addAttribute("players", players);
         return "Home";
     }
