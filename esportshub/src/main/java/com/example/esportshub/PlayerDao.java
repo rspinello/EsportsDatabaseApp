@@ -163,7 +163,7 @@ public class PlayerDao{
 		  
 		  while (resultSet.next())
 		  {
-			  Player player = new Player(resultSet.getString("PLAYERID"),resultSet.getString("FNAME"),resultSet.getString("LNAME"),resultSet.getString("COUNTRY"),resultSet.getInt("AGE"),resultSet.getInt("YEARS_PRO"),resultSet.getInt("TOURNAMENT_WINS"),resultSet.getInt("IMAGERESOURCEID"));
+			  Player player = new Player(resultSet.getString("PLAYERID"),resultSet.getString("FNAME"),resultSet.getString("LNAME"),resultSet.getString("COUNTRY"),resultSet.getString("GAMERTAG"),resultSet.getInt("AGE"),resultSet.getInt("YEARS_PRO"),resultSet.getInt("TOURNAMENT_WINS"),resultSet.getInt("IMAGERESOURCEID"));
               result.add(player);
 		  }
 		  
