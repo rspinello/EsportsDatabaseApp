@@ -29,7 +29,7 @@ public class User{
     }
 
     public boolean equals(Object o){
-        return this.USERID.equals(((User)(o)).PASSWORD);
+        return this.USERID.equals(((User)(o)).USERID)&&this.PASSWORD.equals(((User)(o)).PASSWORD);
     }
 
 }
