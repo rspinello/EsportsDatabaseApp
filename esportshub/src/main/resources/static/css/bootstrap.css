@@ -35,6 +35,16 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.nav input[type=text] {
+  display:inline;
+  border: 3px solid black;
+  margin: 10px;
+  padding: 9px; 
+  border-width:3px;
+  font-size: 13px;
+  border-color: #000;
+}
+
 *,
 *::before,
 *::after {
