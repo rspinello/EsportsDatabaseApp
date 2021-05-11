@@ -24,8 +24,21 @@ public class User {
         return pass;
     }
 
+    //Setters
+    public void setUname(String uname) {
+        this.uname = uname;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
     //other
     public String toString(){
         return "USERID:"+uname+" PASSWORD:"+pass;
+    }
+
+    public boolean equals(Object o){
+        return this.uname.equals(((User)(o)).uname)&&this.pass.equals(((User)(o)).pass);
     }
 }
