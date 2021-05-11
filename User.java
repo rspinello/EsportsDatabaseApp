@@ -27,4 +27,9 @@ public class User{
     public String toString(){
         return "USERID:"+USERID+" PASSWORD:"+PASSWORD;
     }
+
+    public boolean equals(Object o){
+        return this.USERID.equals(((User)(o)).PASSWORD);
+    }
+
 }
