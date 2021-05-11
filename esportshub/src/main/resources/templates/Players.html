@@ -1,13 +1,13 @@
 <!doctype html>
 
-<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="utf-8">
 
   <title>Players</title>
   <link rel="icon" href="logo.png">
 
-  <link href="\esportshub\src\main\resources\static\css\bootstrap.css" rel="stylesheet">
+  <link href="\css\bootstrap.css" rel="stylesheet">
 
 </head>
 
@@ -20,12 +20,12 @@
   </div>
 
   <ul class="nav" >
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="Games.html">Games</a></li>
-    <li><a href="Teams.html">Teams</a></li>
-    <li><a href="Tournaments.html">Tournaments</a></li>
-    <form action="#" th:action="@{/Players}" th:object="${Player}" method="post">
-      <input type="text" placeholder="Search for team name.." th:field="*{fname}" name="search">
+    <li><a th:href="@{/home}">Home</a></li>
+    <li><a th:href="@{/games}">Games</a></li>
+    <li><a th:href="@{/teams}">Teams</a></li>
+    <li><a th:href="@{/tournaments}">Tournaments</a></li>
+    <form action="#" th:action="@{/players}" method="POST">
+      <input type="text" placeholder="Search for player name.." th:value="${gamertag}" name="gamertag">
       <button type="submit" value="Submit" class="btn btn-success">Search</button>
     </form>
   </ul>
@@ -33,7 +33,24 @@
   <div class="content">
 
 
-    //PUT METHODS FOR CONTENT HERE
+    <table>
+      <tr>
+        <th>Gamertag</th>
+        <th>Name</th>
+        <th>County</th>
+        <th>Age</th>
+        <th>Years Pro</th>
+        <th>Tournament Wins</th>
+      </tr>
+      <tr th:each="player : ${players}">
+        <td th:text="${player.gamertag}"></td>
+        <td th:text="${player.fname + ' ' + player.lname}"></td>
+        <td th:text="${player.country}"></td>
+        <td th:text="${player.age}"></td>
+        <td th:text="${player.years_pro}"></td>
+        <td th:text="${player.tournament_wins}"></td>
+      </tr>
+    </table>
 
   </div>
 
