@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Leaderboard</title>
   <link rel="icon" href="logo.png"/>
-  <link href="\esportshub\src\main\resources\static\css\bootstrap.css" rel="stylesheet"/>
+  <link href="\css\bootstrap.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -24,7 +24,24 @@
   
   <div class="content">
 
-    <p th:text="${players}"></p>
+    <table>
+      <tr>
+        <th>Gamertag</th>
+        <th>Name</th>
+        <th>County</th>
+        <th>Age</th>
+        <th>Years Pro</th>
+        <th>Tournament Wins</th>
+      </tr>
+      <tr th:each="player : ${players}">
+        <td th:text="${player.playerid}"></td>
+        <td th:text="${player.fname + ' ' + player.lname}"></td>
+        <td th:text="${player.country}"></td>
+        <td th:text="${player.age}"></td>
+        <td th:text="${player.years_pro}"></td>
+        <td th:text="${player.tournament_wins}"></td>
+      </tr>
+    </table>
 
   </div>
 

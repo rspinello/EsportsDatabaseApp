@@ -5,7 +5,8 @@ public class Player{
     public String playerid;
     public String fname;       
     public String lname;      
-    public String country;            
+    public String country;
+    public String gamertag;            
     public int age;               
     public int years_pro;         
     public int tournament_wins;    
@@ -17,17 +18,19 @@ public class Player{
         this.fname=null;
         this.lname=null;
         this.country=null;
+        this.gamertag=null;
         this.age=0;
         this.years_pro=0;
         this.tournament_wins=0;
         this.image_resource_id=0;
     }
     
-    public Player(String playerid, String fname, String lname, String country, int age, int years_pro, int tournament_wins, int image_resource_id){
+    public Player(String playerid, String fname, String lname, String country, String gamertag,int age, int years_pro, int tournament_wins, int image_resource_id){
         this.playerid=playerid;
         this.fname=fname;
         this.lname=lname;
         this.country=country;
+        this.gamertag=gamertag;
         this.age=age;
         this.years_pro=years_pro;
         this.tournament_wins=tournament_wins;
@@ -49,6 +52,10 @@ public class Player{
 
     public String getCountry() {
         return country;
+    }
+
+    public String getGamertag() {
+        return gamertag;
     }
 
     public int getAge() {
