@@ -24,6 +24,7 @@
     <li><a th:href="@{/teams}">Teams</a></li>
     <li><a th:href="@{/players}">Players</a></li>
     <li><a th:href="@{/games}">Games</a></li>
+    <li><a th:href="@{/login}">Log Out</a></li>
     <form action="#" th:action="@{/tournaments}" method="POST">
       <input type="text" placeholder="Search for tournament name.." th:value="${name}" name="name">
       <button type="submit" value="Submit" class="btn btn-success">Search</button>
