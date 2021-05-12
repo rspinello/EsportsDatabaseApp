@@ -3957,6 +3957,13 @@ table, th {
   padding-bottom: 30px;
 }
 
+.teams th{
+
+  padding: 160px;
+  padding-bottom: 20px;
+
+}
+
 
 /* visited link */
 a:visited {
