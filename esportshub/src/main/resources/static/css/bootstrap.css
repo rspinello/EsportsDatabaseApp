@@ -3964,6 +3964,49 @@ table, th {
 
 }
 
+.games {
+
+  margin-left: auto; 
+  margin-right: auto;
+
+
+}
+
+
+playdet td {
+  padding: 400px;
+}
+
+.tourgame td{
+
+  padding-left: 600px;
+
+}
+
+.contentt {
+
+  margin-left: auto; 
+  margin-right: auto;
+
+}
+
+.contenttp {
+
+  margin-left: auto; 
+  margin-right: auto;
+  padding-left: 30px;
+  padding-bottom: 20px;
+
+}
+
+.tournamentbody {
+  position:relative;
+  margin:0;
+  padding:0;
+  overflow:auto;
+}
+
+
 
 /* visited link */
 a:visited {
