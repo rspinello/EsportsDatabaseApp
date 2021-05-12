@@ -1,13 +1,13 @@
 <!doctype html>
 
-<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="utf-8">
 
   <title>Tournaments</title>
   <link rel="icon" href="logo.png">
 
-  <link href="\esportshub\src\main\resources\static\css\bootstrap.css" rel="stylesheet">
+  <link href="\css\bootstrap.css" rel="stylesheet">
 
 </head>
 
@@ -20,20 +20,28 @@
   </div>
 
   <ul class="nav" >
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="Teams.html">Teams</a></li>
-    <li><a href="Players.html">Players</a></li>
-    <li><a href="Games.html">Games</a></li>
-    <form action="#" th:action="@{/Tournaments}" th:object="${tournament}" method="post">
-      <input type="text" placeholder="Search for team name.." th:field="*{tournament_id}" name="search">
+    <li><a th:href="@{/home}">Home</a></li>
+    <li><a th:href="@{/teams}">Teams</a></li>
+    <li><a th:href="@{/players}">Players</a></li>
+    <li><a th:href="@{/games}">Games</a></li>
+    <form action="#" th:action="@{/tournaments}" method="POST">
+      <input type="text" placeholder="Search for tournament name.." th:value="${name}" name="name">
       <button type="submit" value="Submit" class="btn btn-success">Search</button>
     </form>
   </ul>
   
   <div class="content">
 
-
-//PUT METHODS FOR CONTENT HERE
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+      </tr>
+      <tr th:each="tournament : ${tournaments}">
+        <td th:text="${tournament.tournament_id}"></td>
+        <td th:text="${tournament.day}"></td>
+      </tr>
+    </table>
 
   </div>
 
