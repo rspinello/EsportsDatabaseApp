@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     
   <div class="jumbotron-a text-center" style="background-color:white;">
     <img src="players.png" style="width: 100px;height:100px;">
@@ -27,11 +26,11 @@
   <div class="content">
 
     <h1 th:text="${player.gamertag}"></h1>
-    <h2 th:text="'Name: ' + ${player.fname} + ' ' + ${player.lname}"></h2>
-    <h2 th:text="'County: ' + ${player.country}"></h2>
-    <h2 th:text="'Age: ' + ${player.age}"></h2>
-    <h2 th:text="'Years Pro: ' + ${player.years_pro}"></h2>
-    <h2 th:text="'Tournament Wins: ' + ${player.tournament_wins}"></h2>
+    <h3 th:text="'Name: ' + ${player.fname} + ' ' + ${player.lname}"></h3>
+    <h4 th:text="'County: ' + ${player.country}"></h4>
+    <h4 th:text="'Age: ' + ${player.age}"></h4>
+    <h4 th:text="'Years Pro: ' + ${player.years_pro}"></h4>
+    <h4 th:text="'Tournament Wins: ' + ${player.tournament_wins}"></h4>
     </br>
     <h1>Team</h1>
     <table>

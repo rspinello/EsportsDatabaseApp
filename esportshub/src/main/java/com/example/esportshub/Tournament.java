@@ -42,4 +42,8 @@ public class Tournament{
         return this.tournament_id.equals(((Tournament)(o)).tournament_id);
     }
 
+    public String toString(){
+        return tournament_id+" "+day+" "+gameid+" "+winner;
+    }
+
 }

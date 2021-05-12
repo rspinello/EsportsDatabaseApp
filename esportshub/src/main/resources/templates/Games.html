@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="utf-8">
 
@@ -8,7 +8,7 @@
   
   <link rel="icon" href="logo.png">
 
-  <link href="\esportshub\src\main\resources\static\css\bootstrap.css" rel="stylesheet">
+  <link href="\css\bootstrap.css" rel="stylesheet">
 
 </head>
 
@@ -21,16 +21,25 @@
   </div>
 
   <ul class="nav" >
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="Teams.html">Teams</a></li>
-    <li><a href="Players.html">Players</a></li>
-    <li><a href="Tournaments.html">Tournaments</a></li>
+    <li><a th:href="@{/home}">Home</a></li>
+    <li><a th:href="@{/teams}">Teams</a></li>
+    <li><a th:href="@{/players}">Players</a></li>
+    <li><a th:href="@{/tournaments}">Tournaments</a></li>
   </ul>
   
   <div class="content">
 
 
-    //PUT METHODS FOR CONTENT HERE
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Years Played</th>
+      </tr>
+      <tr th:each="game : ${games}">
+        <td th:text="${game.name}"></td>
+        <td th:text="${game.years_played}"></td>
+      </tr>
+    </table>
 
   </div>
 

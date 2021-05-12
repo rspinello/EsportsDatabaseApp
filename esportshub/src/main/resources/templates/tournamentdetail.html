@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Player Details</title>
+  <title>Tournament Details</title>
   <link rel="icon" href="logo.png">
 
   <link href="\css\bootstrap.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 
     
   <div class="jumbotron-a text-center" style="background-color:white;">
-    <img src="tournamentdetails.png" style="width: 100px;height:100px;">
+    <img src="tournaments.png" style="width: 100px;height:100px;">
     <p></p>
   </div>
 
@@ -29,8 +29,34 @@
   
   <div class="content">
 
-
-    //PUT METHODS FOR CONTENT HERE
+    <h1 th:text="${tournament.tournament_id}"></h1>
+    <h2 th:text="${tournament.day}"></h2>
+    <h1>Game</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Years Played</th>
+      </tr>
+      <tr>
+        <td th:text="${game.name}"></td>
+        <td th:text="${game.years_played}"></td>
+      </tr>
+    </table>
+    <h1>Team</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>County</th>
+        <th>Years Pro</th>
+        <th>Money Won</th>
+      </tr>
+      <tr>
+        <td th:text="${team.name}"></td>
+        <td th:text="${team.country}"></td>
+        <td th:text="${team.years_pro}"></td>
+        <td th:text="'$' + ${team.money_won}"></td>
+      </tr>
+    </table>
 
   </div>
 
