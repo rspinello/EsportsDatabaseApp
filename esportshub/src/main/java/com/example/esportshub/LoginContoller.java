@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class LoginContoller {
     
+    @GetMapping(value = {"", "/"})
+    public String index(Model model) {
+        return "redirect:/login";
+    }
 
     @GetMapping("/login")
     public String loginForm(Model model) {

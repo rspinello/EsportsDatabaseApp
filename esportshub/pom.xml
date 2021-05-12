@@ -10,11 +10,12 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>esportshub</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>esportshub</name>
 	<description>esports hub web app</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>15</java.version>
+		<start-class>com.example.esportshub.EsportshubApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -37,6 +38,8 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<packaging>jar</packaging>
 
 	<build>
 		<plugins>

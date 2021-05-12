@@ -12,7 +12,7 @@ public class CreateUserController {
     @GetMapping("/createuser")
     public String createUserForm(Model model) {
         model.addAttribute("user", new User());
-        return "CreateUser";
+        return "Createuser";
     }
 
     @PostMapping("/createuser")
