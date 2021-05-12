@@ -7,7 +7,7 @@
   <title>Tournament Details</title>
   <link rel="icon" href="logo.png">
 
-  <link href="\esportshub\src\main\resources\static\css\bootstrap.css" rel="stylesheet">
+  <link href="\css\bootstrap.css" rel="stylesheet">
 
 </head>
 
@@ -32,7 +32,7 @@
     <h1 th:text="${tournament.tournament_id}"></h1>
     <h2 th:text="${tournament.day}"></h2>
     <h1>Game</h1>
-    <table>
+    <table class="contentt">
       <tr>
         <th>Name</th>
         <th>Years Played</th>
@@ -43,7 +43,7 @@
       </tr>
     </table>
     <h1>Team</h1>
-    <table>
+    <table class="contentt">
       <tr>
         <th>Name</th>
         <th>County</th>
